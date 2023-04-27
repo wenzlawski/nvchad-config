@@ -91,7 +91,7 @@ local plugins = {
     },
   },
 
-  { "goolord/alpha-nvim",      enabled = false },
+  { "goolord/alpha-nvim",     enabled = false },
   {
     "lewis6991/gitsigns.nvim",
     opts = {
@@ -160,9 +160,9 @@ local plugins = {
       window = { open = "vsplit" },
     },
   },
-  { "junegunn/vim-easy-align", event = "User AstroFile" },
-  { "machakann/vim-sandwich",  event = "User AstroFile" },
-  { "wakatime/vim-wakatime",   event = "User AstroFile" },
+  { "junegunn/vim-easy-align" },
+  { "machakann/vim-sandwich" },
+  { "wakatime/vim-wakatime" },
 
   {
     "p00f/clangd_extensions.nvim",
@@ -190,15 +190,6 @@ local plugins = {
       return opts
     end,
   },
-
-  -- To make a plugin not be loaded
-  -- {
-  --   "NvChad/nvim-colorizer.lua",
-  --   enabled = false
-  -- },
-
-  -- To use a extras plugin
-  -- { import = "custom.configs.extras.symbols-outline", },
 }
 
 return plugins
