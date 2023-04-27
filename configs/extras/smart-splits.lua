@@ -1,4 +1,4 @@
---@type NvChadConfig
+--@type NvPluginSpec
 local spec = {
   "mrjones2014/smart-splits.nvim",
   init = function()

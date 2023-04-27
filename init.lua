@@ -5,3 +5,6 @@
 --   pattern = "*",
 --   command = "tabdo wincmd =",
 -- })
+
+vim.g.copilot_assume_mapped = true
+

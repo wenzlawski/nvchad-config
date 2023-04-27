@@ -9,6 +9,7 @@ M.general = {
   },
 }
 
+
 M.toggleterm = {
   plugin = true,
   -- toggle comment in both modes
@@ -82,13 +83,65 @@ M.smart_splits = {
   },
 }
 
--- M.mason = {
---   plugin = true,
---   n = {
---     ["<leader>pm"] = { "<cmd>Mason<cr>", "Mason Installer" },
---     ["<leader>pM"] = { "<cmd>MasonUpdateAll<cr>", "Mason Update" },
---   },
--- }
+M.mason = {
+  plugin = true,
+  n = {
+    ["<leader>pm"] = { "<cmd>Mason<cr>", "Mason Installer" },
+    ["<leader>pM"] = { "<cmd>MasonUpdateAll<cr>", "Mason Update" },
+  },
+}
+
+M.lazy = {
+  plugin = true,
+  n = {
+    ["<leader>pi"] = {
+      function()
+        require("lazy").install()
+      end,
+      "Plugins Install",
+    },
+    ["<leader>ps"] = {
+      function()
+        require("lazy").home()
+      end,
+      "Plugins Status",
+    },
+    ["<leader>pS"] = {
+      function()
+        require("lazy").sync()
+      end,
+      "Plugins Sync",
+    },
+    ["<leader>pu"] = {
+      function()
+        require("lazy").check()
+      end,
+      "Plugins Check Updates",
+    },
+    ["<leader>pU"] = {
+      function()
+        require("lazy").update()
+      end,
+      "Plugins Update",
+    },
+  },
+}
+
+M.repl = {
+  plugin = true,
+  n = {
+    ["<leader>rr"] = { "<Plug>Send", "Send to REPL" },
+    ["<leader>rl"] = { "<Plug>SendLine", "Send line to REPL" },
+    ["<leader>r<cr>"] = { "<cjd>SendHere<cr>", "Set REPL" },
+  },
+}
+
+M.zen = {
+  plugin = true,
+  n = {
+    ["<leader>z"] = { "<cmd>ZenMode<cr>", "Zen Mode" },
+  },
+}
 
 -- Extras example
 -- M.symbols_outline = {

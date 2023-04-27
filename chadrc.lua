@@ -21,4 +21,6 @@ M.plugins = "custom.plugins"
 -- check core.mappings for table structure
 M.mappings = require "custom.mappings"
 
+-- require("core.utils").load_mappings "lazy"
+
 return M
