@@ -1,6 +1,8 @@
 ---@type ChadrcConfig
 local M = {}
 
+_G.chad = {}
+
 -- Path to overriding theme and highlights files
 local highlights = require "custom.highlights"
 
@@ -11,6 +13,8 @@ M.ui = {
   hl_override = highlights.override,
   hl_add = highlights.add,
 }
+
+chad.user_terminals = {}
 
 M.plugins = "custom.plugins"
 
