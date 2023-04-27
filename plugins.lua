@@ -4,6 +4,15 @@ local overrides = require "custom.configs.overrides"
 local plugins = {
 
   -- Override plugin definition options
+  { import = "custom.configs.extras.copilot"},
+  { import = "custom.configs.extras.diffview"},
+  { import = "custom.configs.extras.mason-extras"},
+  { import = "custom.configs.extras.symbols-outline"},
+  { import = "custom.configs.extras.trouble"},
+  { import = "custom.configs.extras.zen"},
+  { import = "custom.configs.extras.toggleterm"},
+  { import = "custom.configs.extras.smart-splits"},
+
 
   {
     "neovim/nvim-lspconfig",
@@ -71,15 +80,6 @@ local plugins = {
       "ahmedkhalf/project.nvim", -- defined in  ./editor.lua
     },
   },
-
-  { import = "custom.configs.extras.copilot"},
-  { import = "custom.configs.extras.diffview"},
-  { import = "custom.configs.extras.mason-extras"},
-  { import = "custom.configs.extras.symbols-outline"},
-  { import = "custom.configs.extras.trouble"},
-  { import = "custom.configs.extras.zen"},
-  { import = "custom.configs.extras.toggleterm"},
-
 
 
   { "goolord/alpha-nvim", enabled = false },

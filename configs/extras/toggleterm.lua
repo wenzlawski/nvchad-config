@@ -4,7 +4,6 @@ local spec = {
   init = function()
     require("core.utils").load_mappings "toggleterm"
   end,
-  name = "toggleterm",
   cmd = { "ToggleTerm", "TermExec" },
   opts = {
     size = 10,
