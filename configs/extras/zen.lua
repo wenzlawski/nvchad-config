@@ -2,6 +2,9 @@
 local spec = {
   "folke/zen-mode.nvim",
   cmd = "ZenMode",
+  init = function()
+    require("core.utils").load_mappings("zen")
+  end,
   opts = {
     window = {
       backdrop = 1,

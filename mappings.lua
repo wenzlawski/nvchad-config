@@ -9,7 +9,6 @@ M.general = {
   },
 }
 
-
 M.toggleterm = {
   plugin = true,
   -- toggle comment in both modes
@@ -140,6 +139,38 @@ M.zen = {
   plugin = true,
   n = {
     ["<leader>z"] = { "<cmd>ZenMode<cr>", "Zen Mode" },
+  },
+}
+
+M.spectre = {
+  plugin = true,
+  n = {
+    ["<leader>S"] = {
+      function()
+        require("spectre").open()
+      end,
+      "Open Spectre",
+    },
+    ["<leader>sw"] = {
+      function()
+        require("spectre").open_visual { select_word = true }
+      end,
+      "Open Spectre",
+    },
+    ["<leader>sp"] = {
+      function()
+        require("spectre").open_file_search { select_word = true }
+      end,
+      "Open Specte",
+    },
+  },
+  v = {
+    ["<leader>sw"] = {
+      function()
+        require("spectre").open_visual()
+      end,
+      "Open Spectre",
+    },
   },
 }
 

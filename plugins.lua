@@ -148,22 +148,18 @@ local plugins = {
   {
     "nvim-pack/nvim-spectre",
     cmd = "Spectre",
-    opts = function()
-      local prefix = "<leader>s"
-      return {
-        mapping = {
-          send_to_qf = { map = prefix .. "q" },
-          replace_cmd = { map = prefix .. "c" },
-          show_option_menu = { map = prefix .. "o" },
-          run_current_replace = { map = prefix .. "C" },
-          run_replace = { map = prefix .. "R" },
-          change_view_mode = { map = prefix .. "v" },
-          resume_last_search = { map = prefix .. "l" },
-        },
-      }
+    init = function()
+      require("core.utils").load_mappings "spectre"
     end,
   },
-  { "willothy/flatten.nvim",   lazy = false,            priority = 1001, opts = { window = { open = "vsplit" } } },
+  {
+    "willothy/flatten.nvim",
+    lazy = false,
+    priority = 1001,
+    opts = {
+      window = { open = "vsplit" },
+    },
+  },
   { "junegunn/vim-easy-align", event = "User AstroFile" },
   { "machakann/vim-sandwich",  event = "User AstroFile" },
   { "wakatime/vim-wakatime",   event = "User AstroFile" },
