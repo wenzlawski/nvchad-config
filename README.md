@@ -37,6 +37,10 @@
 
 `utils.lua` for utility functions.
 
+## Editing
+
+When trying out new plugins you should do so in a separate branch to not break anything.
+
 
 ## Templates
 To use an extension, add a line of
